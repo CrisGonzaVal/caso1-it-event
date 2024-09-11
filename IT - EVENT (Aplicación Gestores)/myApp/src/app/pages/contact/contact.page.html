@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/"
+        text=""
+        color="light">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Contáctanos ahora!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Contáctanos!</ion-card-subtitle>
+    </ion-card-header>    
+
+    <ion-card-content>
+      <ion-list lines="none"> <!-- Para borrar las lineas que separan en el FORMULARIO -->
+
+        <!-- Aquí comienza el formulario y los datos a rellenar-->
+        <ion-item>
+          <ion-input type="text" label="Nombre: " name="nom" [(ngModel)]="nom" labelPlacement="floating" placeholder=" Ingrese su nombre"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="apellido" label="Apellidos: " name="apellido" [(ngModel)]="apellido" labelPlacement="floating" placeholder=" Ingrese su apellido"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="rut" label="Rut: " name="rut" [(ngModel)]="rut" labelPlacement="floating" placeholder=" Ingrese su Rut"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="email" label="Email: " name="email" [(ngModel)]="email" labelPlacement="floating" placeholder=" Ingrese su email"></ion-input>
+        </ion-item>
+
+        <ion-item> <!-- ESTE ES EL FORMULARIO -->
+          <ion-textarea label="Escríbenos ahora!" name="comentario" [(ngModel)]="comentario" labelPlacement="floating"placeholder="Cuéntanos sobre ti..."></ion-textarea>
+        </ion-item>
+
+
+      </ion-list>
+    </ion-card-content>
+
+    <div style="text-align: center; padding-bottom: 20px;">  <!-- ESTE ES NUESTRO BOTÓN "ENVIAR DEL FORMULARIO"-->
+      <ion-button (click)="mensaje()" fill="solid" class="boton">
+        Enviar
+      </ion-button>
+    </div>
+
+  </ion-card>
+
+</ion-content>

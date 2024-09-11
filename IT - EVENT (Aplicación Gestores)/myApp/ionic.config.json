@@ -1,0 +1,9 @@
+{
+  "name": "myApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "browser": "C:\\Users\\Cristian\\AppData\\Local\\Lambdatest\\LT Browser\\Application\\LTBrowser.exe", 
+  "_comment": "browser es la ruta del navegador a ejecutar el proyecto"
+}

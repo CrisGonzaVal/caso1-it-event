@@ -1,0 +1,21 @@
+ion-segment {
+    margin-bottom: 20px;
+  }
+  
+  ion-list {
+    padding: 0;
+  }
+  
+  ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+  }
+  
+  ion-button {
+    display: flex;
+    align-items: center;
+    ion-icon {
+      margin-right: 8px; // Ajusta el espacio entre el ícono y el texto
+    }
+  }
+    

@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Autenticación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-segment (ionChange)="segmentChanged($event)" value="login">
+    <ion-segment-button value="login">Inicio de sesión</ion-segment-button>
+    <ion-segment-button value="register">Registro</ion-segment-button>
+    <ion-segment-button value="forgot">Recuperar contraseña</ion-segment-button>
+  </ion-segment>
+
+  
+  <ion-card id="foto">
+    <ion-img src="assets/itevents.png"></ion-img>
+  </ion-card>
+
+  <ion-list *ngIf="segment === 'login'">
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input [(ngModel)]="login.email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="login.password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="loginUser()">Iniciar sesión</ion-button>
+  </ion-list>
+
+  <ion-list *ngIf="segment === 'register'">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="register.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input [(ngModel)]="register.email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="register.password" type="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" (click)="registerUser()">Registrar</ion-button>
+  </ion-list>
+
+  <ion-list *ngIf="segment === 'forgot'">
+    <ion-item>
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input [(ngModel)]="forgot.email" type="email"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="recoverPassword()">Recuperar contraseña</ion-button>
+  </ion-list>
+
+
+</ion-content>

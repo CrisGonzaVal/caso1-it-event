@@ -1,0 +1,33 @@
+Node 20
+Angular 18...
+ionic 7.2
+
+cmd> node -v  :   version node
+cmd> ng version  :  version angular
+cmd> ionic  :  verion ionic
+
+Crear proyecto ionic
+*descargar e instalar Node 20.16
+cmd> ionic start MyApp
+ - ngmodule
+ -framework? Angular
+ -template? blank
+
+*levantar servidor
+cmd Myapp>ionic serve
+
+ionic serve --browser "C:\\Users\\Cristian\\AppData\\Local\\Lambdatest\\LT Browser\\Application\\LTBrowser.exe"
+
+crear pagina (page) inicio
+cmd MyApp>ionic g (generate) page pages/inicio 
+
+crear pagina (page) alert
+cmd MyApp>ionic g (generate) page pages/alert
+        ionic g page pages/contact
+
+---------------------------------------------------------
+
+<ul>   ion-list
+<li>    ion-item
+
+aion-menu

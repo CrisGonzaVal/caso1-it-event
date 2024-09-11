@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button 
+        defaultHref="/"
+        text=""
+        color="light">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title>Registrar evento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Formulario de Evento</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      
+      <form (ngSubmit)="onSubmit()">
+        <ion-item>
+          <ion-label>Registrar Evento: </ion-label>
+          <ion-input [(ngModel)]="evento.nombre" name="nombre" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Descripción del evento: </ion-label>
+          <ion-input [(ngModel)]="evento.descripcion" name="descripcion" required></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit">Registrar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

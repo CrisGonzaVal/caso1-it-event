@@ -1,0 +1,54 @@
+<!-- src/app/pages/inicio/inicio.page.html -->
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" color="light" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- CONTENIDO COMO SUBTITULO DEL HOME-->
+<ion-content [fullscreen]="true">
+  <ion-text color="tertiary" style="display: flex; justify-content: center; width: 100%;">
+    <h1 style="text-align: center; width: 100%;">Bienvenidos a IT-Events & Professional Support</h1>
+  </ion-text>
+
+<!-- IMAGEN DEL INICIO HOME-->
+  <ion-card id="foto">
+    <ion-img src="assets/itevent.png" ></ion-img>
+  </ion-card>
+
+  <!-- BOTONES DEL INICIO QUE REDIRECCIONAN A LAS PÁGINAS DE REGISTRO-->
+
+  <div id="centrar">
+    <ion-button (click)="registrarActividad()" fill="solid" shape="round" class="boton">
+      Registrar actividad
+    </ion-button>
+  </div>
+
+  <div id="centrar">
+    <ion-button (click)="registrarSeminario()" fill="solid" shape="round" class="boton">
+      Registrar seminario
+    </ion-button>
+  </div>
+
+  <div id="centrar">
+    <ion-button (click)="registrarEvento()" fill="solid" shape="round" class="boton">
+      Registrar evento
+    </ion-button>
+  </div>
+
+
+  <div class="logout-container" style="display: flex; justify-content: center; margin-top: 20px;">
+    <ion-button (click)="logoutUser()" color="danger" expand="full">
+      <ion-icon name="log-out-outline"></ion-icon>
+      Cerrar sesión
+    </ion-button>
+  </div>
+
+</ion-content>
